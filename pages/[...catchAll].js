@@ -13,9 +13,11 @@ export default function CatchAllPage({ documentId, doc, model } = {}) {
 export async function getStaticPaths() {
   await content.load()
 
-  const paths = content.available.map((catchAll) => ({
-    params: { catchAll: catchAll.split("/") }
-  }))
+  const paths = content.available
+    .filter((id) => id !== "index")
+    .map((catchAll) => ({
+      params: { catchAll: catchAll.split("/") }
+    }))
 
   return {
     paths,

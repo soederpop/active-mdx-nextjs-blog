@@ -601,24 +601,27 @@ acorn@^7.4.0:
   resolved "https://registry.yarnpkg.com/acorn/-/acorn-7.4.1.tgz#feaed255973d2e77555b83dbc08851a6c63520fa"
   integrity sha512-nQyp0o1/mNdbTO1PO6kHkwSrmgZ0MT/jCCpNiwbUjGoRN4dlBhqJtoQuCnEOKzgTVwg0ZWiCoQy6SxMebQVh8A==
 
-active-mdx@^0.0.3:
-  version "0.0.3"
-  resolved "https://registry.yarnpkg.com/active-mdx/-/active-mdx-0.0.3.tgz#96b50d87486dcfc40afc4ea907bcebda563a0feb"
-  integrity sha512-RbuuIsFsq1de3SEDr2D7n2VwheBl5wbaBBmRwD6DKDPp2HWIXA5hkJehdAg2nJYDVU1srtB93r1Jbikr7wrEwA==
+active-mdx@^0.0.8:
+  version "0.0.8"
+  resolved "https://registry.yarnpkg.com/active-mdx/-/active-mdx-0.0.8.tgz#ade6985ad46e4d12e25fba5f171fa24f75331ac0"
+  integrity sha512-SQRRmo8uTXtaSf6yr2I1wDUZh9CPvYFV9A9kuJdHhW9JjRhC1Q9tD7ttaATOgyp3VBMPrh0JnQxLLLESfWeeqQ==
   dependencies:
     "@mdx-js/mdx" "^1.6.22"
     "@mdx-js/mdxast" "^1.1.1"
     gray-matter "^4.0.3"
     inflect "^0.5.0"
     js-yaml "^4.1.0"
+    lodash "^4.17.21"
     mdast-util-to-string "^3.1.0"
     mdx-stringify "^0.0.5"
+    minimist "^1.2.5"
     rehype-stringify "^9.0.2"
     remark "^14.0.2"
     remark-frontmatter "^4.0.1"
     remark-mdx "^1.6.22"
     remark-parse "^10.0.1"
     remark-stringify "^10.0.2"
+    stringify-object "^4.0.0"
     unified "^10.1.1"
     unist-util-find-after "^4.0.0"
     unist-util-find-all-after "^4.0.0"
@@ -2578,7 +2581,7 @@ lodash.uniq@4.5.0:
   resolved "https://registry.yarnpkg.com/lodash.uniq/-/lodash.uniq-4.5.0.tgz#d0225373aeb652adc1bc82e4945339a842754773"
   integrity sha1-0CJTc662Uq3BvILklFM5qEJ1R3M=
 
-lodash@^4.17.19:
+lodash@^4.17.19, lodash@^4.17.21:
   version "4.17.21"
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.21.tgz#679591c564c3bffaae8454cf0b3df370c3d6911c"
   integrity sha512-v2kDEe57lecTulaDIuNTPy3Ry4gLGJ6Z1O3vE1krgXZNrsQ+LFTGHVxVjcXPs17LhbZVGedAJv8XZ1tvj5FvSg==
