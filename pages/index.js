@@ -1,6 +1,6 @@
 import Head from "next/head"
 import styles from "../styles/Home.module.css"
-import ContentIndex from "content/index.mdx"
+import ContentIndex from "content/README.md"
 
 export default function Home() {
   return (

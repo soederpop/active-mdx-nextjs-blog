@@ -1,11 +1,13 @@
 import "../styles/globals.css"
-import { MDXProvider } from "@mdx-js/react"
+import MdxWrapper from "components/MdxWrapper"
 
 function MyApp({ Component, pageProps }) {
   return (
-    <MDXProvider components={{}}>
-      <Component {...pageProps} />
-    </MDXProvider>
+    <div className="site-container">
+      <MdxWrapper>
+        <Component {...pageProps} />
+      </MdxWrapper>
+    </div>
   )
 }
 

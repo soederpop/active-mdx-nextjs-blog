@@ -1,6 +1,6 @@
 import { Collection } from "active-mdx"
-import Epic from "./models/Epic.js"
-import Story from "./models/Story.js"
+import ApiDoc from "./models/ApiDoc.js"
+import Guide from "./models/Guide.js"
 
 import path from "path"
 
@@ -8,9 +8,9 @@ const rootPath = path.parse(import.meta.url.replace("file://", "")).dir
 
 export const collection = new Collection({ rootPath })
 
-collection.model("Epic", Epic)
-collection.model("Story", Story)
+collection.model("ApiDoc", ApiDoc)
+collection.model("Guide", Guide)
 
-export { Epic, Story }
+export { ApiDoc, Guide }
 
 export default collection
