@@ -12,7 +12,7 @@ This section contains guides for getting started with and using ActiveMDX.
 
 The following documentation is about the different classes and methods available in the ActiveMDX API.
 
-- [ASTQuery](./api/AstQuery.mdx)
+- [ASTQuery](./api/ASTQuery.mdx)
 - [Collection](./api/Collection.mdx)
 - [CollectionQuery](./api/CollectionQuery.mdx)
 - [Document](./api/Document.mdx)
