@@ -5,7 +5,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "sync:content": "cp -r ../active-mdx/docs/* content/"
   },
   "dependencies": {
     "@codesandbox/sandpack-react": "^0.9.8",
