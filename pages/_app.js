@@ -1,18 +1,15 @@
-import "../styles/globals.css"
 import MdxWrapper from "components/MdxWrapper"
 import Navigation from "components/Navigation"
+import MainLayout from "components/MainLayout"
+import "semantic-ui-css/semantic.min.css"
 
 function MyApp({ Component, pageProps }) {
   return (
     <MdxWrapper>
-      <div className="site-container">
-        <div className="nav">
-          <Navigation />
-        </div>
-        <div className="content">
-          <Component {...pageProps} />
-        </div>
-      </div>
+      <MainLayout>
+        <Navigation />
+        <Component {...pageProps} />
+      </MainLayout>
     </MdxWrapper>
   )
 }
