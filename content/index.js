@@ -1,16 +1,14 @@
 import { Collection } from "active-mdx"
 import ApiDoc from "./models/ApiDoc.js"
-import Guide from "./models/Guide.js"
 
 import path from "path"
 
 const rootPath = path.parse(import.meta.url.replace("file://", "")).dir
 
-export const collection = new Collection({ rootPath })
+export const collection = new Collection({ rootPath, models: [ApiDoc] })
 
 collection.model("ApiDoc", ApiDoc)
-collection.model("Guide", Guide)
 
-export { ApiDoc, Guide }
+export { ApiDoc }
 
 export default collection

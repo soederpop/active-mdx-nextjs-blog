@@ -1,28 +1,26 @@
 // This file is only necessary because I have problems dynamically importing MDX files
-import Readme1 from "./README.md"
 import Api1 from "./api/AstQuery.mdx"
-import Api2 from "./api/Collection.mdx"
-import Api3 from "./api/Document.mdx"
+import Api2 from "./api/Document.mdx"
+import Api3 from "./api/Collection.mdx"
 import Api4 from "./api/Model.mdx"
 import Api5 from "./api/NodeShortcuts.mdx"
 import Guides1 from "./guides/README.md"
 import Guides2 from "./guides/models/README.md"
-import Guides3 from "./guides/models/introduction.mdx"
-import Guides4 from "./guides/models/querying.mdx"
-import Guides5 from "./guides/models/relationships.mdx"
-import Guides6 from "./guides/usage/with-nextjs.mdx"
+import Guides3 from "./guides/models/querying.mdx"
+import Guides4 from "./guides/models/relationships.mdx"
+import Guides5 from "./guides/usage/with-nextjs.mdx"
+import Index1 from "./README.md"
 const mdx = {
-  "README": Readme1,
   "api/AstQuery": Api1,
-  "api/Collection": Api2,
-  "api/Document": Api3,
+  "api/Document": Api2,
+  "api/Collection": Api3,
   "api/Model": Api4,
   "api/NodeShortcuts": Api5,
-  "guides/README": Guides1,
-  "guides/models/README": Guides2,
-  "guides/models/introduction": Guides3,
-  "guides/models/querying": Guides4,
-  "guides/models/relationships": Guides5,
-  "guides/usage/with-nextjs": Guides6,
+  "guides/introduction": Guides1,
+  "guides/models/introduction": Guides2,
+  "guides/models/querying": Guides3,
+  "guides/models/relationships": Guides4,
+  "guides/usage/with-nextjs": Guides5,
+  index: Index1
 }
 export default mdx

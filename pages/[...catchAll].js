@@ -1,8 +1,6 @@
 import content from "content"
 import dynamic from "next/dynamic"
 import DocumentProvider from "components/DocumentProvider"
-import AstQuery from "active-mdx/src/AstQuery"
-import Editor from "components/Editor"
 
 export default function CatchAllPage({
   documentId,
@@ -14,10 +12,6 @@ export default function CatchAllPage({
     import(`../content/${documentId}.${extension}`)
   )
 
-  global.astQuery = new AstQuery(doc.ast)
-
-  console.log("Doc", doc)
-
   return (
     <DocumentProvider
       doc={doc}
@@ -25,14 +19,7 @@ export default function CatchAllPage({
       extension={extension}
       documentId={documentId}
     >
-      <div style={{ height: "100%", width: "100%" }}>
-        <div style={{ width: "50%", float: "left" }}>
-          <Component />
-        </div>
-        <div style={{ width: "50%", float: "left" }}>
-          <Editor value={doc.content} language="markdown" />
-        </div>
-      </div>
+      <Component />
     </DocumentProvider>
   )
 }

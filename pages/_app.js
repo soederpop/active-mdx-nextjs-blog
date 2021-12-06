@@ -1,13 +1,19 @@
 import "../styles/globals.css"
 import MdxWrapper from "components/MdxWrapper"
+import Navigation from "components/Navigation"
 
 function MyApp({ Component, pageProps }) {
   return (
-    <div className="site-container">
-      <MdxWrapper>
-        <Component {...pageProps} />
-      </MdxWrapper>
-    </div>
+    <MdxWrapper>
+      <div className="site-container">
+        <div className="nav">
+          <Navigation />
+        </div>
+        <div className="content">
+          <Component {...pageProps} />
+        </div>
+      </div>
+    </MdxWrapper>
   )
 }
 
