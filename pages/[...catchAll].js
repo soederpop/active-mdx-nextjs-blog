@@ -1,6 +1,8 @@
 import content from "content"
 import dynamic from "next/dynamic"
 import DocumentProvider from "components/DocumentProvider"
+import Breadcrumb from "components/Breadcrumb"
+import { Container } from "semantic-ui-react"
 
 export default function CatchAllPage({
   documentId,
@@ -19,7 +21,12 @@ export default function CatchAllPage({
       extension={extension}
       documentId={documentId}
     >
-      <Component />
+      <>
+        <Breadcrumb />
+        <Container fluid style={{ paddingRight: "1rem" }}>
+          <Component />
+        </Container>
+      </>
     </DocumentProvider>
   )
 }
@@ -55,7 +62,10 @@ export async function getStaticProps(context = {}) {
     props: {
       documentId,
       extension,
-      model: (model && model.toJSON()) || {},
+      model: {
+        title: model ? model.title : doc.title || documentId.split("/").pop(),
+        ...((model && model.toJSON()) || {})
+      },
       doc: JSON.parse(JSON.stringify(doc.toJSON()))
     }
   }

@@ -32,6 +32,7 @@ export default function MainLayout(props = {}) {
             <Sidebar
               as={Menu}
               vertical
+              fluid
               inverted
               visible={visible}
               onHide={() => setVisible(false)}
@@ -51,7 +52,7 @@ export default function MainLayout(props = {}) {
         </Column>
       </Row>
       <Row only="tablet computer">
-        <Column width={3}>
+        <Column width={2}>
           <Menu
             vertical
             inverted
@@ -64,9 +65,7 @@ export default function MainLayout(props = {}) {
             {navigation}
           </Menu>
         </Column>
-        <Column width={13} style={{ padding: "24px" }}>
-          {content}
-        </Column>
+        <Column width={14}>{content}</Column>
       </Row>
     </Grid>
   )
