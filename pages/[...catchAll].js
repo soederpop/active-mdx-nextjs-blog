@@ -2,7 +2,8 @@ import content from "content"
 import dynamic from "next/dynamic"
 import DocumentProvider from "components/DocumentProvider"
 import Breadcrumb from "components/Breadcrumb"
-import { Container } from "semantic-ui-react"
+import { Button, Grid, Container } from "semantic-ui-react"
+import Link from "next/link"
 
 export default function CatchAllPage({
   documentId,
@@ -22,7 +23,16 @@ export default function CatchAllPage({
       documentId={documentId}
     >
       <>
-        <Breadcrumb />
+        <Grid padded>
+          <Grid.Column floated="left" width={4}>
+            <Breadcrumb />
+          </Grid.Column>
+          <Grid.Column floated="right" width={4}>
+            <Button>
+              <Link href={`/explorer/${documentId}`}>View in Explorer</Link>
+            </Button>
+          </Grid.Column>
+        </Grid>
         <Container fluid style={{ paddingRight: "1rem" }}>
           <Component />
         </Container>

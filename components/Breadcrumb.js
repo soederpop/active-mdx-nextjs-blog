@@ -12,10 +12,6 @@ export default function BreadcrumbNavigation(props = {}) {
         <Link href="/">Home</Link>
       </Breadcrumb.Section>
       <Breadcrumb.Divider />
-      <Breadcrumb.Section>
-        <Link href="/guides/README">Guides</Link>
-      </Breadcrumb.Section>
-      <Breadcrumb.Divider />
       <Breadcrumb.Section>{title}</Breadcrumb.Section>
     </Breadcrumb>
   )
