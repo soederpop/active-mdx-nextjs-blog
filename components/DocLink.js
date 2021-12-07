@@ -3,7 +3,7 @@ import Link from "next/link"
 import { useRouter } from "next/router"
 
 export default function DocLink(props = {}) {
-  const { children, absolute = false } = props
+  const { children, absolute = false, onClick } = props
   const router = useRouter()
 
   if (!props.href) {
@@ -22,7 +22,7 @@ export default function DocLink(props = {}) {
   if (href.startsWith(".")) {
     return (
       <Link href={resolveHref(href).replace(/\.mdx?$/, "")}>
-        <a>{children}</a>
+        <a onClick={onClick}>{children}</a>
       </Link>
     )
   }

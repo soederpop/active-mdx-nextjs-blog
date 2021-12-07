@@ -24,10 +24,10 @@ export default function CatchAllPage({
     >
       <>
         <Grid padded>
-          <Grid.Column floated="left" width={4}>
+          <Grid.Column floated="left" width={12}>
             <Breadcrumb />
           </Grid.Column>
-          <Grid.Column floated="right" width={4}>
+          <Grid.Column floated="right" width={4} only="tablet computer">
             <Button>
               <Link href={`/explorer/${documentId}`}>View in Explorer</Link>
             </Button>
