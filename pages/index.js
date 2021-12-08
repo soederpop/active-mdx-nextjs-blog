@@ -1,16 +1,14 @@
 import Head from "next/head"
-import ContentIndex from "content/README.md"
+import { Container, Grid, Header } from "semantic-ui-react"
+import EpicDemo from "content/demos/epic-demo.mdx"
 
 export default function Home() {
   return (
     <div>
       <Head>
-        <title>Active MDX Demo</title>
+        <title>ActiveMDX - Structured Writing Data for React</title>
       </Head>
-
-      <main>
-        <ContentIndex />
-      </main>
+      <EpicDemo />
     </div>
   )
 }

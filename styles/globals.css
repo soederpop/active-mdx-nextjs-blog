@@ -12,3 +12,7 @@
 .mdx-document h6 code {
   color: magenta;
 }
+
+.code-samples span code {
+  font-family: monospace !important;
+}
