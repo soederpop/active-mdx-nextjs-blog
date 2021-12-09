@@ -4,7 +4,6 @@ import ScopeOfWorkIntro from "content/usecases/software-development/scope-of-wor
 export default function ScopeOfWorkDemo(props = {}) {
   return (
     <div>
-      <pre>{JSON.stringify(props.epics, null, 2)}</pre>
       <ScopeOfWorkIntro />
     </div>
   )
@@ -12,12 +11,14 @@ export default function ScopeOfWorkDemo(props = {}) {
 
 export async function getStaticProps() {
   const collection = await import(
-    "content/usecases/software-development/docs/index.js"
+    "content/usecases/software-development/docs/index.mjs"
   ).then((mod) => mod.default.load())
+
+  const epics = await collection.model("Epic").query().fetchAll()
 
   return {
     props: {
-      epics: collection.available
+      epics: epics.map((epic) => epic.toJSON({ related: ["stories"] }))
     }
   }
 }

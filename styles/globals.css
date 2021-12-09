@@ -20,6 +20,7 @@ li {
   color: magenta;
 }
 
+.mdx-document span code,
 .code-samples span code {
   font-family: monospace !important;
 }
